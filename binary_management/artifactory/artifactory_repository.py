@@ -289,7 +289,7 @@ def create_remote(artifactory, params):
 def create_virtual(artifactory, params):
     virtual_repo = artifactory.repository.virtual()
 
-    for field, details in ArgumentSpecs.remote().iteritems():
+    for field, details in ArgumentSpecs.virtual().iteritems():
         setattr(virtual_repo, field, params.get(field,
             details.get("default")))
 
